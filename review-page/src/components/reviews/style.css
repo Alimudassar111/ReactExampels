@@ -1,0 +1,51 @@
+.avatar { grid-area: avatar; }
+.date { grid-area: date; }
+.stars { grid-area: stars; }
+.product-name { grid-area: product-name; }
+.review-detail { grid-area: review-detail; }
+
+@media only screen and (max-width: 768px) {
+  .review-container {
+    border: 1.5px solid #cececea8;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'product-name product-name'
+      'stars stars'
+      'avatar avatar'
+      'review-detail review-detail'
+      'date date';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .review-container {
+    border: 1.5px solid #cececea8;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'avatar date stars product-name'
+      'review-detail review-detail review-detail review-detail';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+}
+
+.review-title {
+  font-weight: bold;
+}
+
+.review-content {
+  line-height: 1.5em;
+}
+.avatar{
+  height: 50px;
+  width: 50px;
+}
